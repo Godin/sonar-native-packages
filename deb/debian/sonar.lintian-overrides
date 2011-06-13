@@ -1,0 +1,10 @@
+sonar: dir-or-file-in-opt
+
+# Ruby scripts
+sonar: script-not-executable
+sonar: wrong-path-for-interpreter
+
+# Java Service Wrapper
+sonar: arch-independent-package-contains-binary-or-object
+sonar: unstripped-binary-or-object
+sonar: missing-dependency-on-libc

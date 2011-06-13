@@ -1,0 +1,13 @@
+Source: sonar
+Section: devel
+Priority: extra
+Maintainer: Evgeny Mandrikov <mandrikov@gmail.com>
+Homepage: http://sonarsource.org/
+
+Package: sonar
+Architecture: all
+Depends: java6-runtime-headless, adduser
+Suggests: default-jre-headless
+Description: Open platform to manage code quality
+ Sonar is an open source software quality management tool, dedicated
+ to continuously analyze and measure source code quality.
