@@ -6,7 +6,7 @@ Homepage: http://sonarsource.org/
 
 Package: sonar
 Architecture: all
-Depends: java6-runtime-headless, adduser
+Depends: java2-runtime, adduser
 Suggests: default-jre-headless
 Description: Open platform to manage code quality
  Sonar is an open source software quality management tool, dedicated
