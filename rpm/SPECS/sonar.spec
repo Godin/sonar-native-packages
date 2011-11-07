@@ -1,9 +1,9 @@
 # Don't try fancy stuff like debuginfo, which is useless on binary-only
 # packages. Don't strip binary too
 # Be sure buildpolicy set to do nothing
-%define        __spec_install_post %{nil}
-%define          debug_package %{nil}
-%define        __os_install_post %{_dbpath}/brp-compress
+%define		__spec_install_post %{nil}
+%define		debug_package %{nil}
+%define		__os_install_post %{_dbpath}/brp-compress
 
 Name:		sonar
 Version:	%{ver}
@@ -21,6 +21,8 @@ BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildRequires:	
 #Requires:	
 BuildArch:	noarch
+Autoreq:	0
+Autoprov:	0
 
 %description
 Sonar is an open source software quality management tool, dedicated
