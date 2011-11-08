@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Deb Repository for Sonar</title>
+    <style>
+      pre { padding:0.5em; margin:1em; background-color:black; color:white }
+    </style>
+</head>
+<body>
+
+<h1>Deb Repository for Sonar</h1>
+
+<a href="../">Home</a><br/>
+<a href="binary/">List of packages</a><br/>
+
+<h2>APT</h2>
+
+Add the following entry in your /etc/apt/sources.list :
+<pre>
+deb http://home.godin.net.ru/sonar-pkg/deb binary/
+</pre>
+
+Update your local package index and install Sonar:
+<pre>
+sudo apt-get update
+sudo apt-get install sonar
+</pre>
+
+</body>
+</html>

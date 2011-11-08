@@ -1,1 +1,4 @@
-*.zip
+SOURCES/sonar*.zip
+BUILD/
+RPMS/
+SRPMS/

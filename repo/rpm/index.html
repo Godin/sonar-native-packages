@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>RPM Repository for Sonar</title>
+    <style>
+      pre { padding:0.5em; margin:1em; background-color:black; color:white }
+    </style>
+</head>
+<body>
+
+<h1>RPM Repository for Sonar</h1>
+
+<a href="../">Home</a><br/>
+<a href="noarch/">List of packages</a><br/>
+
+<h2>YUM</h2>
+
+Add repository:
+<pre>
+sudo wget -O /etc/yum.repos.d/sonar.repo http://home.godin.net.ru/sonar-pkg/rpm/sonar.repo
+</pre>
+
+Install Sonar:
+<pre>
+yum install sonar
+</pre>
+
+<h2>Zypper</h2>
+
+Add repository:
+<pre>
+zypper addrepo http://home.godin.net.ru/sonar-pkg/rpm sonar
+</pre>
+
+Install Sonar:
+<pre>
+zypper install sonar
+</pre>
+
+</body>
+</html>
