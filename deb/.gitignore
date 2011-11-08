@@ -1,3 +1,5 @@
-/tmp
-*.zip
-*.deb
+tmp/
+debian/changelog
+debian/files
+sonar*.zip
+sonar*.deb
