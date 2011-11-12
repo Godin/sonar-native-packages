@@ -36,10 +36,18 @@ to continuously analyze and measure source code quality.
 %install
 rm -rf %{buildroot}
 
+# Remove unnecessary files
 rm -rv bin/windows*
 rm -rv bin/solaris*
 rm -rv bin/macosx*
 rm -rv bin/linux-ppc*
+
+# Fix EOL in configuration files
+for i in conf/* ; do
+  echo "dos2unix $i"
+  awk '{ sub("\r$", ""); print }' $i > $i.new
+  mv $i.new $i
+done
 
 mkdir -p %{buildroot}/opt/sonar/
 cp -R %{_builddir}/sonar-%{ver}/* %{buildroot}/opt/sonar/

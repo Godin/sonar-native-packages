@@ -31,10 +31,18 @@ echo "sonar (${VER}) unstable; urgency=low
 unzip sonar-${VER}.zip -d tmp/opt/
 mv tmp/opt/sonar-${VER}/ tmp/opt/sonar/
 
+# Remove unnecessary files
 rm -rv tmp/opt/sonar/bin/windows*
 rm -rv tmp/opt/sonar/bin/solaris*
 rm -rv tmp/opt/sonar/bin/macosx*
 rm -rv tmp/opt/sonar/bin/linux-ppc*
+
+# Fix EOL in configuration files
+for i in tmp/opt/sonar/conf/* ; do
+  echo "dos2unix $i"
+  awk '{ sub("\r$", ""); print }' $i > $i.new
+  mv $i.new $i
+done
 
 # lintian overrides
 mkdir -p tmp/usr/share/lintian/overrides/
