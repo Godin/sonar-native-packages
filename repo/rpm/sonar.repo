@@ -1,4 +1,4 @@
 [sonar]
 name=Sonar
-baseurl=http://home.godin.net.ru/sonar-pkg/rpm
+baseurl=http://downloads.sourceforge.net/project/sonar-pkg/rpm
 gpgcheck=0

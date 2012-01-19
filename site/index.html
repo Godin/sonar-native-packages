@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Sonar native packages</title>
+<link rel="icon" type="image/png" href="favicon.ico" />
+<style>
+  h2 { border-bottom: 1px solid black }
+  pre { padding:0.5em; margin:1em; background-color:black; color:white }
+</style>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-6691139-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+
+<a href="http://github.com/Godin/sonar-native-packages"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub" /></a>
+
+<h1>Sonar native packages</h1>
+
+Those packages install standalone version of <a href="http://sonarsource.org">Sonar</a> into "/opt/sonar" and provide init script, so it can be launched as:
+<pre>
+/etc/init.d/sonar start
+</pre>
+
+<h2>Debian-based Linux distributions such as Ubuntu</h2>
+
+<h3>APT</h3>
+
+Add the following entry in your /etc/apt/sources.list :
+<pre>
+deb http://downloads.sourceforge.net/project/sonar-pkg/deb binary/
+</pre>
+
+Update your local package index and install Sonar:
+<pre>
+sudo apt-get update
+sudo apt-get install sonar
+</pre>
+
+<h2>RPM-based Linux distributions such as RedHat, Fedora, CentOS, openSUSE</h2>
+
+<h3>YUM</h3>
+
+Add repository:
+<pre>
+sudo wget -O /etc/yum.repos.d/sonar.repo http://downloads.sourceforge.net/project/sonar-pkg/rpm/sonar.repo
+</pre>
+
+Install Sonar:
+<pre>
+yum install sonar
+</pre>
+
+<h3>Zypper</h3>
+
+Add repository:
+<pre>
+zypper addrepo http://downloads.sourceforge.net/project/sonar-pkg/rpm sonar
+</pre>
+
+Install Sonar:
+<pre>
+zypper install sonar
+</pre>
+
+<h2>Gentoo</h2>
+
+See <a href="http://code.google.com/p/godin-gentoo-repository/wiki/Sonar">godin-gentoo-repository</a>
+
+</body>
+</html>
