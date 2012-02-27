@@ -20,5 +20,5 @@ rpm/build.sh ${VER}
 echo "Building RPM repository"
 cp -v rpm/RPMS/noarch/* repo/rpm/noarch/
 cd repo
-createrepo rpm
+createrepo rpm -s sha
 cd ../
