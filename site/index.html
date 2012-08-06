@@ -70,16 +70,34 @@ Install Sonar:
 zypper install sonar
 </pre>
 
+<h2>Gentoo</h2>
+
+<h3>Portage</h3>
+
+Add overlay:
+<pre>
+layman -L
+layman -a godin
+</pre>
+
+Install Sonar:
+<pre>
+emerge -av dev-util/sonar-bin
+</pre>
+
+<h3>Paludis</h3>
+
+Configure <a href="http://code.google.com/p/godin-gentoo-repository/wiki/HowTo">repository</a>, then install Sonar:
+<pre>
+cave resolve -x dev-util/sonar-bin
+</pre>
+
 <h2>Homebrew for MacOS X</h2>
 
 Install <a href="http://mxcl.github.com/homebrew/">Homebrew</a>, then install Sonar:
 <pre>
 brew install sonar
 </pre>
-
-<h2>Gentoo</h2>
-
-See <a href="http://code.google.com/p/godin-gentoo-repository/wiki/Sonar">godin-gentoo-repository</a>
 
 </body>
 </html>
