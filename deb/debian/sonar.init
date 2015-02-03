@@ -24,24 +24,35 @@ else
   JSW=/opt/sonar/bin/linux-x86-32/sonar.sh
 fi
 
+check_rc()
+{
+  if [ "$1" -ne 0 ]; then
+    exit "$1"
+  fi
+}
+
 do_start()
 {
   su sonar -c "$JSW start"
+  check_rc "$?"
 }
 
 do_stop()
 {
   su sonar -c "$JSW stop"
+  check_rc "$?"
 }
 
 do_status()
 {
   su sonar -c "$JSW status"
+  check_rc "$?"
 }
 
 do_restart()
 {
   su sonar -c "$JSW restart"
+  check_rc "$?"
 }
 
 case "$1" in
