@@ -23,5 +23,5 @@ cd ..
 echo "Building DEB repository"
 cp -v deb/sonar.deb repo/deb/binary/sonar_${VER}_all.deb
 cd repo/deb/
-dpkg-scanpackages binary /dev/null | gzip -9c > binary/Packages.gz
+dpkg-scanpackages -m binary /dev/null | gzip -9c > binary/Packages.gz
 cd ../../
