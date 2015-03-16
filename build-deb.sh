@@ -2,6 +2,7 @@
 
 # Requires:
 #   app-arch/dpkg
+#   sys-apps/fakeroot
 
 set -e
 
