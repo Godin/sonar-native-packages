@@ -75,7 +75,7 @@ rm -rf %{buildroot}
 %files
 %defattr(0644,sonar,sonar,0755)
 /opt/sonar
-%config /opt/sonar/conf/sonar.properties
+%config(noreplace) /opt/sonar/conf/sonar.properties
 
 %attr(0755,sonar,sonar) /opt/sonar/bin/linux-x86-32/sonar.sh
 %attr(0755,sonar,sonar) /opt/sonar/bin/linux-x86-32/wrapper
