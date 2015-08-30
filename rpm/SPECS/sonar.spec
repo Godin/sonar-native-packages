@@ -14,7 +14,7 @@ Packager:	Evgeny Mandrikov <mandrikov@gmail.com>
 Group:		Development/Tools
 License:	LGPLv3
 URL:		http://sonarsource.org/
-Source:		sonar-%{ver}.zip
+Source:		sonarqube-%{ver}.zip
 Source1:	sonar.init.in
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
@@ -29,7 +29,7 @@ Sonar is an open source software quality management tool, dedicated
 to continuously analyze and measure source code quality.
 
 %prep
-%setup -q
+%setup -q -n sonarqube-%{ver}
 
 %build
 
@@ -50,7 +50,7 @@ for i in conf/* ; do
 done
 
 mkdir -p %{buildroot}/opt/sonar/
-cp -R %{_builddir}/sonar-%{ver}/* %{buildroot}/opt/sonar/
+cp -R %{_builddir}/sonarqube-%{ver}/* %{buildroot}/opt/sonar/
 
 %__install -D -m0755 "%{SOURCE1}" "%{buildroot}/etc/init.d/%{name}"
 

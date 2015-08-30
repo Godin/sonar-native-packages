@@ -14,7 +14,7 @@ VER=$1
 
 echo "Building RPM package"
 rm -v rpm/SOURCES/*.zip || true
-cp -v /usr/distfiles/sonar-${VER}.zip rpm/SOURCES/
+cp -v /usr/distfiles/sonarqube-${VER}.zip rpm/SOURCES/
 rpm/build.sh ${VER}
 
 echo "Building RPM repository"
