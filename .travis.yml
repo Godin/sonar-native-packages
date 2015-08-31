@@ -1,0 +1,18 @@
+sudo: false
+
+notifications:
+  email: false
+
+addons:
+  apt:
+    packages:
+      - rpm
+
+cache:
+  directories:
+  - 'downloads'
+
+# Skip "install" stage:
+install: true
+
+script: ./travis.sh
