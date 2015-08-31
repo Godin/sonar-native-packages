@@ -35,7 +35,8 @@ mv tmp/opt/sonarqube-${VER}/ tmp/opt/sonar/
 rm -rv tmp/opt/sonar/bin/windows*
 rm -rv tmp/opt/sonar/bin/solaris*
 rm -rv tmp/opt/sonar/bin/macosx*
-rm -rv tmp/opt/sonar/bin/linux-ppc*
+# Removed from official distribution in 5.1:
+rm -rv tmp/opt/sonar/bin/linux-ppc* || true
 
 # Fix EOL in configuration files
 for i in tmp/opt/sonar/conf/* ; do

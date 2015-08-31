@@ -40,7 +40,8 @@ rm -rf %{buildroot}
 rm -rv bin/windows*
 rm -rv bin/solaris*
 rm -rv bin/macosx*
-rm -rv bin/linux-ppc*
+# Removed from official distribution in 5.1:
+rm -rv bin/linux-ppc* || true
 
 # Fix EOL in configuration files
 for i in conf/* ; do
