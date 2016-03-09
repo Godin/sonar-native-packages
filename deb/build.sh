@@ -33,7 +33,8 @@ mv tmp/opt/sonarqube-${VER}/ tmp/opt/sonar/
 
 # Remove unnecessary files
 rm -rv tmp/opt/sonar/bin/windows*
-rm -rv tmp/opt/sonar/bin/solaris*
+# Removed from official distribution in 5.4:
+rm -rv tmp/opt/sonar/bin/solaris* || true
 rm -rv tmp/opt/sonar/bin/macosx*
 # Removed from official distribution in 5.1:
 rm -rv tmp/opt/sonar/bin/linux-ppc* || true

@@ -38,7 +38,8 @@ rm -rf %{buildroot}
 
 # Remove unnecessary files
 rm -rv bin/windows*
-rm -rv bin/solaris*
+# Removed from official distribution in 5.4:
+rm -rv bin/solaris* || true
 rm -rv bin/macosx*
 # Removed from official distribution in 5.1:
 rm -rv bin/linux-ppc* || true
