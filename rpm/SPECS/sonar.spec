@@ -87,4 +87,6 @@ rm -rf %{buildroot}
 %attr(0755,sonar,sonar) /opt/sonar/bin/linux-x86-64/wrapper
 %attr(0755,sonar,sonar) /opt/sonar/bin/linux-x86-64/lib/libwrapper.so
 
+%attr(0755,sonar,sonar) /opt/sonar/elasticsearch/bin/elasticsearch
+
 %attr(0755,root,root) %config /etc/init.d/%{name}
